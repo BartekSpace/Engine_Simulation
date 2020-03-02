@@ -45,7 +45,7 @@ def set_gui ():
                    # [sg.In(key='in')]]
 
     layout = [[sg.TabGroup([[sg.Tab('Tab 1', tab1_layout, tooltip='tip'), sg.Tab('Tab 2', tab2_layout)]], tooltip='TIP2')],
-              [sg.Button('Subbmit',key='button'),sg.Button('Quit',key='quit')] ]
+              [sg.Button('Subbmit',key='button'),sg.Button('Generate Txt',key='txt'),sg.Button('Quit',key='quit')] ]
 
     window = sg.Window('My window with tabs', default_element_size=(25,1)).Layout(layout).Finalize()
 
@@ -76,6 +76,8 @@ def set_gui ():
         #       window.FindElement('maslo').Update(disabled=True)
         #event, values = window.Read()
         event, values = window.read()
+        flag = False
+       # print (values)
 
         if event is None:  # always,  always give a way out!
              quit()
@@ -84,10 +86,15 @@ def set_gui ():
             quit()
 
         if event is 'button':
-            return values
+            return values, flag
             #print(event, values)
             quit()
             #print ('dupa')
+        if event is 'txt':
+            flag = True
+            return values, flag
+            quit()
+
 
     # while True:
     #     event, values = window.read()

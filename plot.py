@@ -154,5 +154,21 @@ def plot(OF,Pressure_Chamber,Pressure_Vessel,Thrust,Isp,Fuel_Flow,Oxid_Flow,Time
 
 
     #plt.show()
+def make_file(value, Time, name):
+   f = open(name, "w")
+   i=0
+   while i < len(Time):
+   # f.write('%d %d\n'%Time[i] %value[i])
+    f.write("%lf" % Time[i])
+    f.write("\t%lf\n" % value[i])
+
+    i=i+1
+   f.close()
+def make_txt(Pressure_Chamber, Pressure_Vessel, Thrust, Time):
+
+   make_file(Pressure_Chamber,Time, 'Chamber.txt')
+   make_file(Pressure_Vessel, Time, 'Vessel.txt')
+   make_file(Thrust, Time, 'Thrust.txt')
+
 
 
