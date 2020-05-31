@@ -10,7 +10,8 @@ def set_gui ():
 
     tab1_layout =  [
         [sg.T('This is inside tab 1')],
-        [sg.Checkbox('Simulation time',default=True,key='check')],[ sg.Text("Time [s]"),sg.InputText( key='time_max',disabled=False,default_text='15')],
+       # [sg.Checkbox('Simulation time',default=True,key='check')],
+        [ sg.Text("Time [s]"),sg.InputText( key='time_max',disabled=False,default_text='15')],
         [sg.Text('_'*120)],
 
 

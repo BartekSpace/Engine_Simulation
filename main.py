@@ -11,6 +11,6 @@ OF, Pressure_Chamber, Pressure_Vessel, Thrust, Isp, Fuel_Flow, Oxid_Flow, Time, 
 plot(OF, Pressure_Chamber, Pressure_Vessel, Thrust, Isp, Fuel_Flow, Oxid_Flow, Time, Radius)
 
 if flag == True:
-   make_txt(Pressure_Chamber,Pressure_Vessel,Thrust,Time)
+   make_txt(Pressure_Chamber,Pressure_Vessel,Thrust,Time,Fuel_Flow)
 
 

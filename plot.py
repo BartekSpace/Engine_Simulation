@@ -164,11 +164,12 @@ def make_file(value, Time, name):
 
     i=i+1
    f.close()
-def make_txt(Pressure_Chamber, Pressure_Vessel, Thrust, Time):
+def make_txt(Pressure_Chamber, Pressure_Vessel, Thrust, Time,Fuel_Flow):
 
    make_file(Pressure_Chamber,Time, 'Chamber.txt')
    make_file(Pressure_Vessel, Time, 'Vessel.txt')
    make_file(Thrust, Time, 'Thrust.txt')
+   make_file(Fuel_Flow, Time, 'Fuel_Flow.txt')
 
 
 
